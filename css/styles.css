@@ -229,7 +229,7 @@ body {
 /* Guide Navigation */
 .guide-nav {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     margin-bottom: 20px;
 }
@@ -280,6 +280,70 @@ body {
 .guide-section p {
     color: var(--text-color);
     line-height: 1.6;
+}
+
+/* Carousel */
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    width: 100%;
+}
+
+.carousel-img {
+    min-width: 100%;
+    width: 100%;
+    border-radius: 10px;
+    background: var(--background-color);
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-btn.prev {
+    left: 10px;
+}
+
+.carousel-btn.next {
+    right: 10px;
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.carousel-dots .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--border-color);
+    cursor: pointer;
+}
+
+.carousel-dots .dot.active {
+    background: var(--primary-color);
 }
 
 .guide-image {

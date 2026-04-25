@@ -14,67 +14,153 @@
         </header>
 
         <nav class="guide-nav" id="guideNav">
-            <button class="nav-btn" onclick="showSection('1About')">1 About</button>
-            <button class="nav-btn" onclick="showSection('2Rules')">2 Rules</button>
-            <button class="nav-btn" onclick="showSection('3ThingsToDo')">3 Things To Do</button>
-            <button class="nav-btn" onclick="showSection('4FoodAndShops')">4 Food & Shops</button>
-            <button class="nav-btn" onclick="showSection('5Help')">5 Help</button>
-            <button class="nav-btn" onclick="showSection('6Check-Out')">6 Check Out</button>
+            <button class="nav-btn" onclick="showSection('1About', this)">1 About</button>
+            <button class="nav-btn" onclick="showSection('2Rules', this)">2 Rules</button>
+            <button class="nav-btn" onclick="showSection('3ThingsToDo', this)">3 Things To Do</button>
+            <button class="nav-btn" onclick="showSection('4FoodAndShops', this)">4 Food & Shops</button>
+            <button class="nav-btn" onclick="showSection('5Help', this)">5 Help</button>
+            <button class="nav-btn" onclick="showSection('6Check-Out', this)">6 Check Out</button>
         </nav>
 
         <main class="guide-content" id="guideContent">
             <section class="guide-section active" id="section-1About">
-                <h2>About</h2>
-                <img src="assets/images/1About/1about.png" alt="About" class="guide-image">
-                <img src="assets/images/1About/2contact.png" alt="Contact" class="guide-image">
-                <img src="assets/images/1About/3resort.png" alt="Resort" class="guide-image">
+                <div class="carousel" data-section="1About">
+                    <button class="carousel-btn prev" onclick="scrollCarousel(this, -1)">‹</button>
+                    <div class="carousel-track">
+                        <img src="assets/images/1About/1about.png" alt="About" class="carousel-img">
+                        <img src="assets/images/1About/2contact.png" alt="Contact" class="carousel-img">
+                        <img src="assets/images/1About/3resort.png" alt="Resort" class="carousel-img">
+                    </div>
+                    <button class="carousel-btn next" onclick="scrollCarousel(this, 1)">›</button>
+                </div>
+                <div class="carousel-dots"></div>
             </section>
 
             <section class="guide-section" id="section-2Rules">
-                <h2>Rules</h2>
-                <img src="assets/images/2Rules/1rules.png" alt="Rules" class="guide-image">
-                <img src="assets/images/2Rules/2waste.png" alt="Waste" class="guide-image">
+                <div class="carousel" data-section="2Rules">
+                    <button class="carousel-btn prev" onclick="scrollCarousel(this, -1)">‹</button>
+                    <div class="carousel-track">
+                        <img src="assets/images/2Rules/1rules.png" alt="Rules" class="carousel-img">
+                        <img src="assets/images/2Rules/2waste.png" alt="Waste" class="carousel-img">
+                    </div>
+                    <button class="carousel-btn next" onclick="scrollCarousel(this, 1)">›</button>
+                </div>
+                <div class="carousel-dots"></div>
             </section>
 
             <section class="guide-section" id="section-3ThingsToDo">
-                <h2>Things To Do</h2>
-                <img src="assets/images/3ThingsToDo/10.png" alt="Things To Do 1" class="guide-image">
-                <img src="assets/images/3ThingsToDo/11.png" alt="Things To Do 2" class="guide-image">
-                <img src="assets/images/3ThingsToDo/12.png" alt="Things To Do 3" class="guide-image">
+                <div class="carousel" data-section="3ThingsToDo">
+                    <button class="carousel-btn prev" onclick="scrollCarousel(this, -1)">‹</button>
+                    <div class="carousel-track">
+                        <img src="assets/images/3ThingsToDo/10.png" alt="Things To Do 1" class="carousel-img">
+                        <img src="assets/images/3ThingsToDo/11.png" alt="Things To Do 2" class="carousel-img">
+                        <img src="assets/images/3ThingsToDo/12.png" alt="Things To Do 3" class="carousel-img">
+                    </div>
+                    <button class="carousel-btn next" onclick="scrollCarousel(this, 1)">›</button>
+                </div>
+                <div class="carousel-dots"></div>
             </section>
 
             <section class="guide-section" id="section-4FoodAndShops">
-                <h2>Food & Shops</h2>
-                <img src="assets/images/4FoodAndShops/14.png" alt="Food & Shops 1" class="guide-image">
-                <img src="assets/images/4FoodAndShops/15.png" alt="Food & Shops 2" class="guide-image">
+                <div class="carousel" data-section="4FoodAndShops">
+                    <button class="carousel-btn prev" onclick="scrollCarousel(this, -1)">‹</button>
+                    <div class="carousel-track">
+                        <img src="assets/images/4FoodAndShops/14.png" alt="Food & Shops 1" class="carousel-img">
+                        <img src="assets/images/4FoodAndShops/15.png" alt="Food & Shops 2" class="carousel-img">
+                    </div>
+                    <button class="carousel-btn next" onclick="scrollCarousel(this, 1)">›</button>
+                </div>
+                <div class="carousel-dots"></div>
             </section>
 
             <section class="guide-section" id="section-5Help">
-                <h2>Help</h2>
-                <img src="assets/images/5Help/1gass.png" alt="Help 1" class="guide-image">
-                <img src="assets/images/5Help/2gass.png" alt="Help 2" class="guide-image">
-                <img src="assets/images/5Help/3gass.png" alt="Help 3" class="guide-image">
+                <div class="carousel" data-section="5Help">
+                    <button class="carousel-btn prev" onclick="scrollCarousel(this, -1)">‹</button>
+                    <div class="carousel-track">
+                        <img src="assets/images/5Help/1gass.png" alt="Help 1" class="carousel-img">
+                        <img src="assets/images/5Help/2gass.png" alt="Help 2" class="carousel-img">
+                        <img src="assets/images/5Help/3gass.png" alt="Help 3" class="carousel-img">
+                    </div>
+                    <button class="carousel-btn next" onclick="scrollCarousel(this, 1)">›</button>
+                </div>
+                <div class="carousel-dots"></div>
             </section>
 
             <section class="guide-section" id="section-6Check-Out">
-                <h2>Check Out</h2>
-                <img src="assets/images/6Check-Out/checkout.png" alt="Check Out" class="guide-image">
+                <div class="carousel" data-section="6Check-Out">
+                    <button class="carousel-btn prev" onclick="scrollCarousel(this, -1)">‹</button>
+                    <div class="carousel-track">
+                        <img src="assets/images/6Check-Out/checkout.png" alt="Check Out" class="carousel-img">
+                    </div>
+                    <button class="carousel-btn next" onclick="scrollCarousel(this, 1)">›</button>
+                </div>
+                <div class="carousel-dots"></div>
             </section>
         </main>
     </div>
 
     <script src="js/app.js"></script>
     <script>
-        function showSection(id) {
+        function showSection(id, btn) {
             document.querySelectorAll('.guide-section').forEach(s => s.classList.remove('active'));
             document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
             document.getElementById('section-' + id).classList.add('active');
-            event.target.classList.add('active');
+            if (btn) btn.classList.add('active');
             document.getElementById('section-' + id).scrollIntoView({ behavior: 'smooth', block: 'start' });
+            initCarousel(document.getElementById('section-' + id));
+        }
+
+        function scrollCarousel(btn, direction) {
+            const carousel = btn.closest('.carousel');
+            const track = carousel.querySelector('.carousel-track');
+            const images = track.querySelectorAll('.carousel-img');
+            const currentIndex = parseInt(carousel.dataset.index) || 0;
+            let newIndex = currentIndex + direction;
+            if (newIndex < 0) newIndex = images.length - 1;
+            if (newIndex >= images.length) newIndex = 0;
+            carousel.dataset.index = newIndex;
+            track.style.transform = `translateX(-${newIndex * 100}%)`;
+            updateDots(carousel, newIndex);
+        }
+
+        function updateDots(carousel, index) {
+            const dots = carousel.closest('.guide-section').querySelectorAll('.carousel-dots .dot');
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+        }
+
+        function initCarousel(section) {
+            const carousel = section.querySelector('.carousel');
+            const track = carousel.querySelector('.carousel-track');
+            const images = track.querySelectorAll('.carousel-img');
+            const dotsContainer = section.querySelector('.carousel-dots');
+            
+            carousel.dataset.index = 0;
+            track.style.transform = 'translateX(0%)';
+            track.style.transition = 'transform 0.3s ease';
+            
+            dotsContainer.innerHTML = '';
+            images.forEach((_, i) => {
+                const dot = document.createElement('span');
+                dot.className = 'dot' + (i === 0 ? ' active' : '');
+                dot.onclick = () => goToSlide(carousel, i);
+                dotsContainer.appendChild(dot);
+            });
+        }
+
+        function goToSlide(carousel, index) {
+            const track = carousel.querySelector('.carousel-track');
+            carousel.dataset.index = index;
+            track.style.transform = `translateX(-${index * 100}%)`;
+            updateDots(carousel, index);
         }
 
         document.addEventListener('DOMContentLoaded', () => {
-            document.querySelector('.nav-btn').classList.add('active');
+            const firstBtn = document.querySelector('.nav-btn');
+            if (firstBtn) firstBtn.classList.add('active');
+            const firstSection = document.querySelector('.guide-section.active');
+            if (firstSection) initCarousel(firstSection);
         });
     </script>
 </body>
