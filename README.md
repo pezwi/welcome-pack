@@ -6,7 +6,7 @@ A tablet-friendly digital welcome pack for your holiday let property, powered by
 
 - **Welcome Display**: Guest names, check-in/out dates & times
 - **Weather Widget**: Current conditions + 3-day forecast for Chapel St Leonards
-- **House Guide**: WiFi details, local area info, rubbish collection, emergency contacts
+- **House Guide**: Welcome, check in/out, WiFi, local transport, places to eat, beach access, parking, recycling, rubbish, heating, emergency contacts
 - **Admin Panel**: PIN-protected form to update all guest information remotely
 
 ## Quick Start
@@ -16,7 +16,7 @@ A tablet-friendly digital welcome pack for your holiday let property, powered by
 3. Upload these files to the repository
 4. Go to Settings → Pages → Source: Deploy from a branch → main → Save
 5. Wait 2-3 minutes for deployment
-6. Access your welcome pack at `https://[your-username].github.io/welcome-pack/`
+6. Access your welcome pack at `https://pezwi.github.io/welcome-pack/`
 
 ## Default Admin PIN
 
@@ -26,19 +26,26 @@ A tablet-friendly digital welcome pack for your holiday let property, powered by
 
 **Change this PIN immediately** via the Admin Panel.
 
-## Adding Your Images
+## House Guide Sections
 
-Replace the placeholder SVG files in `assets/images/` with your own images:
+| Image | Section |
+|-------|---------|
+| welcome.png | Welcome |
+| checkin.png | Check In / Check Out |
+| wifi.png | WiFi Details |
+| bus.png | Local Bus |
+| taxi.png | Local Taxi |
+| eat.png | Places to Eat |
+| beach.png | Beach Access |
+| beach-hut.png | Beach Hut |
+| attractions.png | Local Attractions |
+| parking.png | Parking |
+| recycling.png | Recycling |
+| rubbish.png | Rubbish Collection |
+| heating.png | Heating |
+| contacts.png | Emergency Contacts |
 
-| Section | File |
-|----------|------|
-| Welcome | `assets/images/welcome.svg` |
-| WiFi | `assets/images/wifi.svg` |
-| Local Area | `assets/images/local-area.svg` |
-| Rubbish | `assets/images/rubbish.svg` |
-| Emergency | `assets/images/emergency.svg` |
-
-For best results, use images that are at least 800x400 pixels.
+Images are stored in `assets/images/`. Replace them with your own images at any time.
 
 ## Kiosk Mode Setup (Lubuntu Tablet)
 
@@ -73,7 +80,7 @@ welcome-pack/
 │   ├── app.js       # Guest data, weather logic
 │   └── admin.js     # Admin form logic
 └── assets/
-    └── images/      # Placeholder images
+    └── images/      # House guide images
 ```
 
 ## Tech Stack
