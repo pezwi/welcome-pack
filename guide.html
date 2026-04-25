@@ -152,11 +152,34 @@
             });
         }
 
+        function scrollToTop() {
+            document.getElementById('guideContent').scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function initScrollTopButton() {
+            const btn = document.getElementById('scrollTopBtn');
+            const container = document.getElementById('guideContent');
+            container.addEventListener('scroll', () => {
+                btn.style.display = container.scrollTop > 200 ? 'flex' : 'none';
+            });
+        }
+
         document.addEventListener('DOMContentLoaded', () => {
             initAllCarousels();
             const firstBtn = document.querySelector('.nav-btn');
             if (firstBtn) firstBtn.classList.add('active');
+            initScrollTopButton();
         });
+
+        function initScrollTopButton() {
+            const btn = document.getElementById('scrollTopBtn');
+            const container = document.getElementById('guideContent');
+            container.addEventListener('scroll', () => {
+                btn.style.display = container.scrollTop > 200 ? 'flex' : 'none';
+            });
+        }
     </script>
+
+    <button class="scroll-top-btn" id="scrollTopBtn" onclick="scrollToTop()">▲ Top</button>
 </body>
 </html>

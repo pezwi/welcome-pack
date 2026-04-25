@@ -129,4 +129,14 @@ function getWeatherIcon(code) {
 document.addEventListener('DOMContentLoaded', () => {
     updateDisplay();
     loadWeather();
+    initScrollTopButton();
 });
+
+function initScrollTopButton() {
+    const btn = document.getElementById('scrollTopBtn');
+    if (!btn) return;
+    
+    window.addEventListener('scroll', () => {
+        btn.style.display = window.scrollY > 200 ? 'flex' : 'none';
+    });
+}
