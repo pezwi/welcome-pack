@@ -7,112 +7,152 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="container guide-container">
-        <header class="guide-header">
-            <button class="back-button" onclick="window.location.href='index.html'">← Back</button>
-            <h1>House Guide</h1>
-        </header>
-
+    <div class="guide-layout">
         <nav class="guide-nav" id="guideNav">
-            <button class="nav-btn" onclick="showSection('1About', this)">1 About</button>
-            <button class="nav-btn" onclick="showSection('2Rules', this)">2 Rules</button>
-            <button class="nav-btn" onclick="showSection('3ThingsToDo', this)">3 Things To Do</button>
-            <button class="nav-btn" onclick="showSection('4FoodAndShops', this)">4 Food & Shops</button>
-            <button class="nav-btn" onclick="showSection('5Help', this)">5 Help</button>
-            <button class="nav-btn" onclick="showSection('6Check-Out', this)">6 Check Out</button>
+            <button class="nav-btn" onclick="showSection('1About', this)" data-section="1About">1<br>About</button>
+            <button class="nav-btn" onclick="showSection('2Rules', this)" data-section="2Rules">2<br>Rules</button>
+            <button class="nav-btn" onclick="showSection('3ThingsToDo', this)" data-section="3ThingsToDo">3<br>Things To Do</button>
+            <button class="nav-btn" onclick="showSection('4FoodAndShops', this)" data-section="4FoodAndShops">4<br>Food & Shops</button>
+            <button class="nav-btn" onclick="showSection('5Help', this)" data-section="5Help">5<br>Help</button>
+            <button class="nav-btn" onclick="showSection('6Check-Out', this)" data-section="6Check-Out">6<br>Check Out</button>
         </nav>
 
-        <main class="guide-content" id="guideContent">
-            <section class="guide-section active" id="section-1About">
-                <div class="carousel" data-section="1About">
-                    <button class="carousel-btn prev" onclick="scrollCarousel(this, -1)">‹</button>
-                    <div class="carousel-track">
-                        <img src="assets/images/1About/1about.png" alt="About" class="carousel-img">
-                        <img src="assets/images/1About/2contact.png" alt="Contact" class="carousel-img">
-                        <img src="assets/images/1About/3resort.png" alt="Resort" class="carousel-img">
-                    </div>
-                    <button class="carousel-btn next" onclick="scrollCarousel(this, 1)">›</button>
-                </div>
-                <div class="carousel-dots"></div>
-            </section>
+        <main class="guide-main" id="guideMain">
+            <div class="section-nav">
+                <button class="section-btn up" onclick="scrollSection(-1)">▲</button>
+                <button class="section-btn down" onclick="scrollSection(1)">▼</button>
+            </div>
 
-            <section class="guide-section" id="section-2Rules">
-                <div class="carousel" data-section="2Rules">
-                    <button class="carousel-btn prev" onclick="scrollCarousel(this, -1)">‹</button>
-                    <div class="carousel-track">
-                        <img src="assets/images/2Rules/1rules.png" alt="Rules" class="carousel-img">
-                        <img src="assets/images/2Rules/2waste.png" alt="Waste" class="carousel-img">
+            <div class="guide-content" id="guideContent">
+                <section class="guide-section active" id="section-1About">
+                    <h2>About</h2>
+                    <div class="carousel" data-section="1About">
+                        <div class="carousel-track" id="track-1About"></div>
+                        <button class="carousel-btn prev" onclick="scrollCarousel(this, -1)">‹</button>
+                        <button class="carousel-btn next" onclick="scrollCarousel(this, 1)">›</button>
+                        <div class="carousel-dots" id="dots-1About"></div>
                     </div>
-                    <button class="carousel-btn next" onclick="scrollCarousel(this, 1)">›</button>
-                </div>
-                <div class="carousel-dots"></div>
-            </section>
+                </section>
 
-            <section class="guide-section" id="section-3ThingsToDo">
-                <div class="carousel" data-section="3ThingsToDo">
-                    <button class="carousel-btn prev" onclick="scrollCarousel(this, -1)">‹</button>
-                    <div class="carousel-track">
-                        <img src="assets/images/3ThingsToDo/10.png" alt="Things To Do 1" class="carousel-img">
-                        <img src="assets/images/3ThingsToDo/11.png" alt="Things To Do 2" class="carousel-img">
-                        <img src="assets/images/3ThingsToDo/12.png" alt="Things To Do 3" class="carousel-img">
+                <section class="guide-section" id="section-2Rules">
+                    <h2>Rules</h2>
+                    <div class="carousel" data-section="2Rules">
+                        <div class="carousel-track" id="track-2Rules"></div>
+                        <button class="carousel-btn prev" onclick="scrollCarousel(this, -1)">‹</button>
+                        <button class="carousel-btn next" onclick="scrollCarousel(this, 1)">›</button>
+                        <div class="carousel-dots" id="dots-2Rules"></div>
                     </div>
-                    <button class="carousel-btn next" onclick="scrollCarousel(this, 1)">›</button>
-                </div>
-                <div class="carousel-dots"></div>
-            </section>
+                </section>
 
-            <section class="guide-section" id="section-4FoodAndShops">
-                <div class="carousel" data-section="4FoodAndShops">
-                    <button class="carousel-btn prev" onclick="scrollCarousel(this, -1)">‹</button>
-                    <div class="carousel-track">
-                        <img src="assets/images/4FoodAndShops/14.png" alt="Food & Shops 1" class="carousel-img">
-                        <img src="assets/images/4FoodAndShops/15.png" alt="Food & Shops 2" class="carousel-img">
+                <section class="guide-section" id="section-3ThingsToDo">
+                    <h2>Things To Do</h2>
+                    <div class="carousel" data-section="3ThingsToDo">
+                        <div class="carousel-track" id="track-3ThingsToDo"></div>
+                        <button class="carousel-btn prev" onclick="scrollCarousel(this, -1)">‹</button>
+                        <button class="carousel-btn next" onclick="scrollCarousel(this, 1)">›</button>
+                        <div class="carousel-dots" id="dots-3ThingsToDo"></div>
                     </div>
-                    <button class="carousel-btn next" onclick="scrollCarousel(this, 1)">›</button>
-                </div>
-                <div class="carousel-dots"></div>
-            </section>
+                </section>
 
-            <section class="guide-section" id="section-5Help">
-                <div class="carousel" data-section="5Help">
-                    <button class="carousel-btn prev" onclick="scrollCarousel(this, -1)">‹</button>
-                    <div class="carousel-track">
-                        <img src="assets/images/5Help/1gass.png" alt="Help 1" class="carousel-img">
-                        <img src="assets/images/5Help/2gass.png" alt="Help 2" class="carousel-img">
-                        <img src="assets/images/5Help/3gass.png" alt="Help 3" class="carousel-img">
+                <section class="guide-section" id="section-4FoodAndShops">
+                    <h2>Food & Shops</h2>
+                    <div class="carousel" data-section="4FoodAndShops">
+                        <div class="carousel-track" id="track-4FoodAndShops"></div>
+                        <button class="carousel-btn prev" onclick="scrollCarousel(this, -1)">‹</button>
+                        <button class="carousel-btn next" onclick="scrollCarousel(this, 1)">›</button>
+                        <div class="carousel-dots" id="dots-4FoodAndShops"></div>
                     </div>
-                    <button class="carousel-btn next" onclick="scrollCarousel(this, 1)">›</button>
-                </div>
-                <div class="carousel-dots"></div>
-            </section>
+                </section>
 
-            <section class="guide-section" id="section-6Check-Out">
-                <div class="carousel" data-section="6Check-Out">
-                    <button class="carousel-btn prev" onclick="scrollCarousel(this, -1)">‹</button>
-                    <div class="carousel-track">
-                        <img src="assets/images/6Check-Out/checkout.png" alt="Check Out" class="carousel-img">
+                <section class="guide-section" id="section-5Help">
+                    <h2>Help</h2>
+                    <div class="carousel" data-section="5Help">
+                        <div class="carousel-track" id="track-5Help"></div>
+                        <button class="carousel-btn prev" onclick="scrollCarousel(this, -1)">‹</button>
+                        <button class="carousel-btn next" onclick="scrollCarousel(this, 1)">›</button>
+                        <div class="carousel-dots" id="dots-5Help"></div>
                     </div>
-                    <button class="carousel-btn next" onclick="scrollCarousel(this, 1)">›</button>
-                </div>
-                <div class="carousel-dots"></div>
-            </section>
+                </section>
+
+                <section class="guide-section" id="section-6Check-Out">
+                    <h2>Check Out</h2>
+                    <div class="carousel" data-section="6Check-Out">
+                        <div class="carousel-track" id="track-6Check-Out"></div>
+                        <button class="carousel-btn prev" onclick="scrollCarousel(this, -1)">‹</button>
+                        <button class="carousel-btn next" onclick="scrollCarousel(this, 1)">›</button>
+                        <div class="carousel-dots" id="dots-6Check-Out"></div>
+                    </div>
+                </section>
+            </div>
         </main>
     </div>
 
+    <button class="back-button-fixed" onclick="window.location.href='index.html'">← Back</button>
+
     <script src="js/app.js"></script>
     <script>
+        const sectionData = {
+            '1About': ['assets/images/1About/1about.png', 'assets/images/1About/2contact.png', 'assets/images/1About/3resort.png'],
+            '2Rules': ['assets/images/2Rules/1rules.png', 'assets/images/2Rules/2waste.png'],
+            '3ThingsToDo': ['assets/images/3ThingsToDo/10.png', 'assets/images/3ThingsToDo/11.png', 'assets/images/3ThingsToDo/12.png'],
+            '4FoodAndShops': ['assets/images/4FoodAndShops/14.png', 'assets/images/4FoodAndShops/15.png'],
+            '5Help': ['assets/images/5Help/1gass.png', 'assets/images/5Help/2gass.png', 'assets/images/5Help/3gass.png'],
+            '6Check-Out': ['assets/images/6Check-Out/checkout.png']
+        };
+
+        let currentSectionIndex = 0;
+        const sections = ['1About', '2Rules', '3ThingsToDo', '4FoodAndShops', '5Help', '6Check-Out'];
+
+        function initAllCarousels() {
+            Object.keys(sectionData).forEach(sectionId => {
+                const track = document.getElementById('track-' + sectionId);
+                const dotsContainer = document.getElementById('dots-' + sectionId);
+                sectionData[sectionId].forEach((img, i) => {
+                    const imgEl = document.createElement('img');
+                    imgEl.src = img;
+                    imgEl.className = 'carousel-img';
+                    imgEl.alt = sectionId + ' ' + (i + 1);
+                    track.appendChild(imgEl);
+                    
+                    const dot = document.createElement('span');
+                    dot.className = 'dot' + (i === 0 ? ' active' : '');
+                    dot.onclick = () => goToSlide(sectionId, i);
+                    dotsContainer.appendChild(dot);
+                });
+            });
+        }
+
         function showSection(id, btn) {
+            const sectionIndex = sections.indexOf(id);
+            if (sectionIndex !== -1) {
+                currentSectionIndex = sectionIndex;
+            }
+            
             document.querySelectorAll('.guide-section').forEach(s => s.classList.remove('active'));
             document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
-            document.getElementById('section-' + id).classList.add('active');
+            
+            const section = document.getElementById('section-' + id);
+            section.classList.add('active');
             if (btn) btn.classList.add('active');
-            document.getElementById('section-' + id).scrollIntoView({ behavior: 'smooth', block: 'start' });
-            initCarousel(document.getElementById('section-' + id));
+            
+            document.getElementById('guideContent').scrollTop = 0;
+            section.scrollIntoView({ block: 'start' });
+        }
+
+        function scrollSection(direction) {
+            let newIndex = currentSectionIndex + direction;
+            if (newIndex < 0) newIndex = sections.length - 1;
+            if (newIndex >= sections.length) newIndex = 0;
+            currentSectionIndex = newIndex;
+            
+            const navBtn = document.querySelector(`.nav-btn[data-section="${sections[newIndex]}"]`);
+            showSection(sections[newIndex], navBtn);
         }
 
         function scrollCarousel(btn, direction) {
             const carousel = btn.closest('.carousel');
-            const track = carousel.querySelector('.carousel-track');
+            const sectionId = carousel.dataset.section;
+            const track = document.getElementById('track-' + sectionId);
             const images = track.querySelectorAll('.carousel-img');
             const currentIndex = parseInt(carousel.dataset.index) || 0;
             let newIndex = currentIndex + direction;
@@ -120,47 +160,63 @@
             if (newIndex >= images.length) newIndex = 0;
             carousel.dataset.index = newIndex;
             track.style.transform = `translateX(-${newIndex * 100}%)`;
-            updateDots(carousel, newIndex);
+            updateDots(sectionId, newIndex);
         }
 
-        function updateDots(carousel, index) {
-            const dots = carousel.closest('.guide-section').querySelectorAll('.carousel-dots .dot');
-            dots.forEach((dot, i) => {
+        function goToSlide(sectionId, index) {
+            const carousel = document.querySelector(`.carousel[data-section="${sectionId}"]`);
+            const track = document.getElementById('track-' + sectionId);
+            carousel.dataset.index = index;
+            track.style.transform = `translateX(-${index * 100}%)`;
+            updateDots(sectionId, index);
+        }
+
+        function updateDots(sectionId, index) {
+            const dotsContainer = document.getElementById('dots-' + sectionId);
+            dotsContainer.querySelectorAll('.dot').forEach((dot, i) => {
                 dot.classList.toggle('active', i === index);
             });
         }
 
-        function initCarousel(section) {
-            const carousel = section.querySelector('.carousel');
-            const track = carousel.querySelector('.carousel-track');
-            const images = track.querySelectorAll('.carousel-img');
-            const dotsContainer = section.querySelector('.carousel-dots');
+        function setupSwipeGestures() {
+            const guideMain = document.getElementById('guideMain');
+            const guideContent = document.getElementById('guideContent');
             
-            carousel.dataset.index = 0;
-            track.style.transform = 'translateX(0%)';
-            track.style.transition = 'transform 0.3s ease';
+            let touchStartX = 0;
+            let touchStartY = 0;
             
-            dotsContainer.innerHTML = '';
-            images.forEach((_, i) => {
-                const dot = document.createElement('span');
-                dot.className = 'dot' + (i === 0 ? ' active' : '');
-                dot.onclick = () => goToSlide(carousel, i);
-                dotsContainer.appendChild(dot);
-            });
-        }
-
-        function goToSlide(carousel, index) {
-            const track = carousel.querySelector('.carousel-track');
-            carousel.dataset.index = index;
-            track.style.transform = `translateX(-${index * 100}%)`;
-            updateDots(carousel, index);
+            guideMain.addEventListener('touchstart', (e) => {
+                touchStartX = e.touches[0].clientX;
+                touchStartY = e.touches[0].clientY;
+            }, { passive: true });
+            
+            guideMain.addEventListener('touchend', (e) => {
+                const touchEndX = e.changedTouches[0].clientX;
+                const touchEndY = e.changedTouches[0].clientY;
+                const deltaX = touchEndX - touchStartX;
+                const deltaY = touchEndY - touchStartY;
+                
+                const activeSection = document.querySelector('.guide-section.active');
+                const carousel = activeSection.querySelector('.carousel');
+                
+                if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 50) {
+                    if (deltaX < 0) {
+                        scrollCarousel(carousel.querySelector('.carousel-btn.next'), 1);
+                    } else {
+                        scrollCarousel(carousel.querySelector('.carousel-btn.prev'), -1);
+                    }
+                }
+            }, { passive: true });
         }
 
         document.addEventListener('DOMContentLoaded', () => {
+            initAllCarousels();
             const firstBtn = document.querySelector('.nav-btn');
-            if (firstBtn) firstBtn.classList.add('active');
-            const firstSection = document.querySelector('.guide-section.active');
-            if (firstSection) initCarousel(firstSection);
+            if (firstBtn) {
+                firstBtn.classList.add('active');
+                currentSectionIndex = 0;
+            }
+            setupSwipeGestures();
         });
     </script>
 </body>
