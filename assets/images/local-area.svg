@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200" viewBox="0 0 400 200">
+  <rect fill="#dcfce7" width="400" height="200"/>
+  <text x="200" y="85" font-family="Arial, sans-serif" font-size="16" fill="#64748b" text-anchor="middle">Local Area</text>
+  <text x="200" y="115" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#16a34a" text-anchor="middle">Your Image Here</text>
+  <rect x="50" y="130" width="300" height="2" fill="#86efac"/>
+</svg>

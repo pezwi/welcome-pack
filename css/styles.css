@@ -1,0 +1,459 @@
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #1e40af;
+    --background-color: #f8fafc;
+    --card-background: #ffffff;
+    --text-color: #1e293b;
+    --text-light: #64748b;
+    --success-color: #16a34a;
+    --error-color: #dc2626;
+    --border-color: #e2e8f0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+/* Welcome Header */
+.welcome-header {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.welcome-header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.guest-name {
+    font-size: 1.5rem;
+    font-weight: 500;
+    opacity: 0.95;
+}
+
+/* Date Cards */
+.dates-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.date-card {
+    background: var(--card-background);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.date-label {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 5px;
+}
+
+.date-value {
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.time-value {
+    display: block;
+    font-size: 1rem;
+    color: var(--text-light);
+    margin-top: 5px;
+}
+
+/* Weather Section */
+.weather-section {
+    background: var(--card-background);
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.weather-section h2 {
+    font-size: 1.125rem;
+    color: var(--text-light);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.weather-current {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #e0f2fe, #f0f9ff);
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.weather-temp {
+    display: block;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.weather-desc {
+    display: block;
+    font-size: 1rem;
+    color: var(--text-light);
+}
+
+.weather-forecast {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.forecast-day {
+    text-align: center;
+    padding: 10px;
+    background: var(--background-color);
+    border-radius: 8px;
+}
+
+.forecast-day .day-name {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--text-light);
+    margin-bottom: 5px;
+}
+
+.forecast-day .day-temp {
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* Navigation */
+.navigation-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.nav-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 20px;
+    background: var(--card-background);
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.nav-button:active {
+    transform: scale(0.98);
+}
+
+.nav-icon {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.nav-text {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.admin-toggle {
+    background: var(--background-color);
+}
+
+/* Guide Page */
+.guide-container {
+    padding-bottom: 40px;
+}
+
+.guide-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background: var(--primary-color);
+    color: white;
+    margin: -20px -20px 20px -20px;
+    border-radius: 0 0 20px 20px;
+}
+
+.back-button {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.guide-header h1 {
+    font-size: 1.25rem;
+}
+
+.guide-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.guide-section {
+    background: var(--card-background);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.guide-section h2 {
+    font-size: 1.25rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.guide-section p {
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.guide-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-top: 15px;
+    background: var(--background-color);
+}
+
+.wifi-info, .contacts-list {
+    background: var(--background-color);
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.wifi-info p, .contacts-list p {
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.wifi-info p:last-child, .contacts-list p:last-child {
+    border-bottom: none;
+}
+
+/* Admin Page */
+.admin-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.pin-entry {
+    text-align: center;
+    background: var(--card-background);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 350px;
+}
+
+.pin-entry h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.pin-display {
+    font-size: 2rem;
+    letter-spacing: 0.5em;
+    margin: 20px 0;
+    color: var(--text-color);
+}
+
+.pin-pad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    max-width: 250px;
+    margin: 0 auto;
+}
+
+.pin-pad button {
+    padding: 20px;
+    font-size: 1.25rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    background: var(--background-color);
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.pin-pad button:hover {
+    background: var(--border-color);
+}
+
+.pin-pad button:active {
+    background: var(--primary-color);
+    color: white;
+}
+
+.error-message {
+    color: var(--error-color);
+    font-size: 0.875rem;
+    margin-top: 15px;
+    min-height: 1.25rem;
+}
+
+.back-link {
+    background: none;
+    border: none;
+    color: var(--text-light);
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 0.875rem;
+}
+
+/* Admin Panel */
+.admin-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background: var(--primary-color);
+    color: white;
+    margin: -20px -20px 20px -20px;
+    border-radius: 0 0 20px 20px;
+}
+
+.admin-header h1 {
+    font-size: 1.25rem;
+}
+
+.logout-button {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.admin-content {
+    width: 100%;
+}
+
+.form-section {
+    background: var(--card-background);
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.form-section h2 {
+    font-size: 1rem;
+    color: var(--text-light);
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.form-section label {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--text-light);
+    margin-bottom: 5px;
+}
+
+.form-section input {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 1rem;
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: border-color 0.2s;
+}
+
+.form-section input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.save-button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+    font-weight: 600;
+    background: var(--success-color);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.change-pin-button {
+    padding: 10px 20px;
+    background: var(--text-light);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 480px) {
+    .dates-section {
+        grid-template-columns: 1fr;
+    }
+
+    .weather-forecast {
+        grid-template-columns: 1fr;
+    }
+
+    .navigation-section {
+        grid-template-columns: 1fr;
+    }
+}

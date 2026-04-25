@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container admin-container" id="pinScreen">
+        <div class="pin-entry">
+            <h2>Admin Access</h2>
+            <p>Enter PIN to continue</p>
+            <div class="pin-display" id="pinDisplay">____</div>
+            <div class="pin-pad">
+                <button onclick="enterPin(1)">1</button>
+                <button onclick="enterPin(2)">2</button>
+                <button onclick="enterPin(3)">3</button>
+                <button onclick="enterPin(4)">4</button>
+                <button onclick="enterPin(5)">5</button>
+                <button onclick="enterPin(6)">6</button>
+                <button onclick="enterPin(7)">7</button>
+                <button onclick="enterPin(8)">8</button>
+                <button onclick="enterPin(9)">9</button>
+                <button onclick="clearPin()">C</button>
+                <button onclick="enterPin(0)">0</button>
+                <button onclick="submitPin()">OK</button>
+            </div>
+            <p id="pinError" class="error-message"></p>
+            <button class="back-link" onclick="window.location.href='index.html'">← Back to Welcome</button>
+        </div>
+    </div>
+
+    <div class="container admin-container hidden" id="adminPanel">
+        <header class="admin-header">
+            <button class="back-button" onclick="window.location.href='index.html'">← Back</button>
+            <h1>Admin Panel</h1>
+            <button class="logout-button" onclick="logout()">Logout</button>
+        </header>
+
+        <main class="admin-content">
+            <form id="guestForm">
+                <section class="form-section">
+                    <h2>Guest Information</h2>
+                    <label>Guest Names</label>
+                    <input type="text" id="adminGuestNames" placeholder="The Smith Family">
+
+                    <label>Check-in Date</label>
+                    <input type="date" id="adminCheckInDate">
+
+                    <label>Check-in Time</label>
+                    <input type="time" id="adminCheckInTime" value="15:00">
+                </section>
+
+                <section class="form-section">
+                    <label>Check-out Date</label>
+                    <input type="date" id="adminCheckOutDate">
+
+                    <label>Check-out Time</label>
+                    <input type="time" id="adminCheckOutTime" value="10:00">
+                </section>
+
+                <section class="form-section">
+                    <h2>WiFi Information</h2>
+                    <label>Network Name</label>
+                    <input type="text" id="adminWifiNetwork" placeholder="Your WiFi Name">
+
+                    <label>Password</label>
+                    <input type="text" id="adminWifiPassword" placeholder="Your Password">
+                </section>
+
+                <section class="form-section">
+                    <h2>Emergency Contact</h2>
+                    <label>Owner Phone</label>
+                    <input type="tel" id="adminOwnerContact" placeholder="07700 900000">
+                </section>
+
+                <button type="submit" class="save-button">Save Changes</button>
+            </form>
+
+            <section class="form-section pin-section">
+                <h2>Change PIN</h2>
+                <label>New PIN (4 digits)</label>
+                <input type="password" id="newPin" maxlength="4" placeholder="1234">
+                <button type="button" class="change-pin-button" onclick="changePin()">Update PIN</button>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>

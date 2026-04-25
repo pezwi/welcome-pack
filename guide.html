@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>House Guide</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container guide-container">
+        <header class="guide-header">
+            <button class="back-button" onclick="window.location.href='index.html'">← Back</button>
+            <h1>House Guide</h1>
+        </header>
+
+        <main class="guide-content">
+            <section class="guide-section">
+                <h2>Welcome</h2>
+                <p>Welcome to our holiday home! We hope you have a wonderful stay. This guide contains everything you need to know about the property and local area.</p>
+                <img src="assets/images/welcome.jpg" alt="Welcome" class="guide-image">
+            </section>
+
+            <section class="guide-section">
+                <h2>WiFi Details</h2>
+                <div class="wifi-info">
+                    <p><strong>Network:</strong> <span id="wifiNetwork">Your WiFi Name</span></p>
+                    <p><strong>Password:</strong> <span id="wifiPassword">Your Password</span></p>
+                </div>
+                <img src="assets/images/wifi.jpg" alt="WiFi" class="guide-image">
+            </section>
+
+            <section class="guide-section">
+                <h2>Local Area</h2>
+                <p>Chapel St Leonards is a peaceful coastal village with beautiful beaches and charming local amenities.</p>
+                <img src="assets/images/local-area.jpg" alt="Local Area" class="guide-image">
+            </section>
+
+            <section class="guide-section">
+                <h2>Rubbish Collection</h2>
+                <p>Bins are collected on <strong>Friday mornings</strong>. Please put bins out the night before.</p>
+                <img src="assets/images/rubbish.jpg" alt="Rubbish" class="guide-image">
+            </section>
+
+            <section class="guide-section">
+                <h2>Emergency Contacts</h2>
+                <div class="contacts-list">
+                    <p><strong>Owner:</strong> <span id="ownerContact">Your Phone Number</span></p>
+                    <p><strong>Emergency Services:</strong> 999</p>
+                    <p><strong>Non-Emergency Police:</strong> 101</p>
+                    <p><strong>Local Hospital:</strong> 01522 500190</p>
+                </div>
+                <img src="assets/images/emergency.jpg" alt="Emergency" class="guide-image">
+            </section>
+        </main>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
