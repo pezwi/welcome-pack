@@ -226,6 +226,33 @@ body {
     font-size: 1.25rem;
 }
 
+/* Guide Navigation */
+.guide-nav {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.nav-btn {
+    padding: 12px 8px;
+    background: var(--card-background);
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.nav-btn:active {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+}
+
+/* Guide Sections */
 .guide-content {
     display: flex;
     flex-direction: column;
@@ -237,6 +264,11 @@ body {
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    display: none;
+}
+
+.guide-section.active {
+    display: block;
 }
 
 .guide-section h2 {
@@ -443,7 +475,11 @@ body {
     display: none;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
+    .guide-nav {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
     .dates-section {
         grid-template-columns: 1fr;
     }

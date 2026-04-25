@@ -13,102 +13,69 @@
             <h1>House Guide</h1>
         </header>
 
-        <main class="guide-content">
-            <section class="guide-section">
-                <h2>Welcome</h2>
-                <p>Welcome to our holiday home! We hope you have a wonderful stay. This guide contains everything you need to know about the property and local area.</p>
-                <img src="assets/images/welcome.png" alt="Welcome" class="guide-image">
+        <nav class="guide-nav" id="guideNav">
+            <button class="nav-btn" onclick="showSection('1About')">1 About</button>
+            <button class="nav-btn" onclick="showSection('2Rules')">2 Rules</button>
+            <button class="nav-btn" onclick="showSection('3ThingsToDo')">3 Things To Do</button>
+            <button class="nav-btn" onclick="showSection('4FoodAndShops')">4 Food & Shops</button>
+            <button class="nav-btn" onclick="showSection('5Help')">5 Help</button>
+            <button class="nav-btn" onclick="showSection('6Check-Out')">6 Check Out</button>
+        </nav>
+
+        <main class="guide-content" id="guideContent">
+            <section class="guide-section active" id="section-1About">
+                <h2>About</h2>
+                <img src="assets/images/1About/1about.png" alt="About" class="guide-image">
+                <img src="assets/images/1About/2contact.png" alt="Contact" class="guide-image">
+                <img src="assets/images/1About/3resort.png" alt="Resort" class="guide-image">
             </section>
 
-            <section class="guide-section">
-                <h2>Check In / Check Out</h2>
-                <p><strong>Check In:</strong> After 3:00 PM</p>
-                <p><strong>Check Out:</strong> Before 10:00 AM</p>
-                <img src="assets/images/checkin.png" alt="Check In / Out" class="guide-image">
+            <section class="guide-section" id="section-2Rules">
+                <h2>Rules</h2>
+                <img src="assets/images/2Rules/1rules.png" alt="Rules" class="guide-image">
+                <img src="assets/images/2Rules/2waste.png" alt="Waste" class="guide-image">
             </section>
 
-            <section class="guide-section">
-                <h2>WiFi Details</h2>
-                <div class="wifi-info">
-                    <p><strong>Network:</strong> <span id="wifiNetwork">Your WiFi Name</span></p>
-                    <p><strong>Password:</strong> <span id="wifiPassword">Your Password</span></p>
-                </div>
-                <img src="assets/images/wifi.png" alt="WiFi" class="guide-image">
+            <section class="guide-section" id="section-3ThingsToDo">
+                <h2>Things To Do</h2>
+                <img src="assets/images/3ThingsToDo/10.png" alt="Things To Do 1" class="guide-image">
+                <img src="assets/images/3ThingsToDo/11.png" alt="Things To Do 2" class="guide-image">
+                <img src="assets/images/3ThingsToDo/12.png" alt="Things To Do 3" class="guide-image">
             </section>
 
-            <section class="guide-section">
-                <h2>Local Bus</h2>
-                <p>There is a bus stop on the main road. Check local routes for times.</p>
-                <img src="assets/images/bus.png" alt="Local Bus" class="guide-image">
+            <section class="guide-section" id="section-4FoodAndShops">
+                <h2>Food & Shops</h2>
+                <img src="assets/images/4FoodAndShops/14.png" alt="Food & Shops 1" class="guide-image">
+                <img src="assets/images/4FoodAndShops/15.png" alt="Food & Shops 2" class="guide-image">
             </section>
 
-            <section class="guide-section">
-                <h2>Local Taxi</h2>
-                <p>For local taxi services, please contact the owner for recommended numbers.</p>
-                <img src="assets/images/taxi.png" alt="Local Taxi" class="guide-image">
+            <section class="guide-section" id="section-5Help">
+                <h2>Help</h2>
+                <img src="assets/images/5Help/1gass.png" alt="Help 1" class="guide-image">
+                <img src="assets/images/5Help/2gass.png" alt="Help 2" class="guide-image">
+                <img src="assets/images/5Help/3gass.png" alt="Help 3" class="guide-image">
             </section>
 
-            <section class="guide-section">
-                <h2>Places to Eat</h2>
-                <p>There are several great places to eat in the local area. Check the map for recommendations.</p>
-                <img src="assets/images/eat.png" alt="Places to Eat" class="guide-image">
-            </section>
-
-            <section class="guide-section">
-                <h2>Beach Access</h2>
-                <p>The beach is a short walk from the property. Enjoy the beautiful coastline!</p>
-                <img src="assets/images/beach.png" alt="Beach Access" class="guide-image">
-            </section>
-
-            <section class="guide-section">
-                <h2>Beach Hut</h2>
-                <p>Beach hut keys are located in the property. Please return after use.</p>
-                <img src="assets/images/beach-hut.png" alt="Beach Hut" class="guide-image">
-            </section>
-
-            <section class="guide-section">
-                <h2>Local Attractions</h2>
-                <p>There are many attractions in the area. Check local guides for recommendations.</p>
-                <img src="assets/images/attractions.png" alt="Attractions" class="guide-image">
-            </section>
-
-            <section class="guide-section">
-                <h2>Parking</h2>
-                <p>Free parking is available on the street. Please be considerate of neighbours.</p>
-                <img src="assets/images/parking.png" alt="Parking" class="guide-image">
-            </section>
-
-            <section class="guide-section">
-                <h2>Recycling</h2>
-                <p>Please separate recycling from general waste. Bins are clearly labelled.</p>
-                <img src="assets/images/recycling.png" alt="Recycling" class="guide-image">
-            </section>
-
-            <section class="guide-section">
-                <h2>Rubbish Collection</h2>
-                <p>Bins are collected on <strong>Friday mornings</strong>. Please put bins out the night before.</p>
-                <img src="assets/images/rubbish.png" alt="Rubbish" class="guide-image">
-            </section>
-
-            <section class="guide-section">
-                <h2>Heating</h2>
-                <p>The heating is controlled by the thermostat. Instructions are in the property.</p>
-                <img src="assets/images/heating.png" alt="Heating" class="guide-image">
-            </section>
-
-            <section class="guide-section">
-                <h2>Emergency Contacts</h2>
-                <div class="contacts-list">
-                    <p><strong>Owner:</strong> <span id="ownerContact">Your Phone Number</span></p>
-                    <p><strong>Emergency Services:</strong> 999</p>
-                    <p><strong>Non-Emergency Police:</strong> 101</p>
-                    <p><strong>Local Hospital:</strong> 01522 500190</p>
-                </div>
-                <img src="assets/images/contacts.png" alt="Emergency Contacts" class="guide-image">
+            <section class="guide-section" id="section-6Check-Out">
+                <h2>Check Out</h2>
+                <img src="assets/images/6Check-Out/checkout.png" alt="Check Out" class="guide-image">
             </section>
         </main>
     </div>
 
     <script src="js/app.js"></script>
+    <script>
+        function showSection(id) {
+            document.querySelectorAll('.guide-section').forEach(s => s.classList.remove('active'));
+            document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById('section-' + id).classList.add('active');
+            event.target.classList.add('active');
+            document.getElementById('section-' + id).scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelector('.nav-btn').classList.add('active');
+        });
+    </script>
 </body>
 </html>
