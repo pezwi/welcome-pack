@@ -7,81 +7,82 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="container guide-container">
-        <header class="guide-header">
-            <button class="back-button" onclick="window.location.href='index.html'">← Back</button>
-            <h1>House Guide</h1>
-        </header>
-
-        <nav class="guide-nav" id="guideNav">
-            <button class="nav-btn" onclick="showSection('1About', this)">1 About</button>
-            <button class="nav-btn" onclick="showSection('2Rules', this)">2 Rules</button>
-            <button class="nav-btn" onclick="showSection('3ThingsToDo', this)">3 Things To Do</button>
-            <button class="nav-btn" onclick="showSection('4FoodAndShops', this)">4 Food & Shops</button>
-            <button class="nav-btn" onclick="showSection('5Help', this)">5 Help</button>
-            <button class="nav-btn" onclick="showSection('6Check-Out', this)">6 Check Out</button>
+    <div class="guide-layout">
+        <button class="back-btn-side" onclick="window.location.href='index.html'">← Back</button>
+        
+        <nav class="guide-nav-side">
+            <button class="nav-btn-side" onclick="showSection('1About', this)">1<br>About</button>
+            <button class="nav-btn-side" onclick="showSection('2Rules', this)">2<br>Rules</button>
+            <button class="nav-btn-side" onclick="showSection('3ThingsToDo', this)">3<br>Things To Do</button>
+            <button class="nav-btn-side" onclick="showSection('4FoodAndShops', this)">4<br>Food & Shops</button>
+            <button class="nav-btn-side" onclick="showSection('5Help', this)">5<br>Help</button>
+            <button class="nav-btn-side" onclick="showSection('6Check-Out', this)">6<br>Check Out</button>
         </nav>
 
-        <main class="guide-content" id="guideContent">
-            <section class="guide-section active" id="section-1About">
-                <h2>About</h2>
-                <div class="carousel" data-section="1About">
-                    <button class="carousel-btn prev" onclick="scrollCarousel(this, -1)">‹</button>
-                    <div class="carousel-track" id="track-1About"></div>
-                    <button class="carousel-btn next" onclick="scrollCarousel(this, 1)">›</button>
-                </div>
-                <div class="carousel-dots" id="dots-1About"></div>
-            </section>
+        <main class="guide-main">
+            <div class="guide-content" id="guideContent">
+                <section class="guide-section active" id="section-1About">
+                    <h2>About</h2>
+                    <div class="carousel" data-section="1About">
+                        <button class="carousel-btn prev" onclick="scrollCarousel(this, -1)">‹</button>
+                        <div class="carousel-track" id="track-1About"></div>
+                        <button class="carousel-btn next" onclick="scrollCarousel(this, 1)">›</button>
+                    </div>
+                    <div class="carousel-dots" id="dots-1About"></div>
+                </section>
 
-            <section class="guide-section" id="section-2Rules">
-                <h2>Rules</h2>
-                <div class="carousel" data-section="2Rules">
-                    <button class="carousel-btn prev" onclick="scrollCarousel(this, -1)">‹</button>
-                    <div class="carousel-track" id="track-2Rules"></div>
-                    <button class="carousel-btn next" onclick="scrollCarousel(this, 1)">›</button>
-                </div>
-                <div class="carousel-dots" id="dots-2Rules"></div>
-            </section>
+                <section class="guide-section" id="section-2Rules">
+                    <h2>Rules</h2>
+                    <div class="carousel" data-section="2Rules">
+                        <button class="carousel-btn prev" onclick="scrollCarousel(this, -1)">‹</button>
+                        <div class="carousel-track" id="track-2Rules"></div>
+                        <button class="carousel-btn next" onclick="scrollCarousel(this, 1)">›</button>
+                    </div>
+                    <div class="carousel-dots" id="dots-2Rules"></div>
+                </section>
 
-            <section class="guide-section" id="section-3ThingsToDo">
-                <h2>Things To Do</h2>
-                <div class="carousel" data-section="3ThingsToDo">
-                    <button class="carousel-btn prev" onclick="scrollCarousel(this, -1)">‹</button>
-                    <div class="carousel-track" id="track-3ThingsToDo"></div>
-                    <button class="carousel-btn next" onclick="scrollCarousel(this, 1)">›</button>
-                </div>
-                <div class="carousel-dots" id="dots-3ThingsToDo"></div>
-            </section>
+                <section class="guide-section" id="section-3ThingsToDo">
+                    <h2>Things To Do</h2>
+                    <div class="carousel" data-section="3ThingsToDo">
+                        <button class="carousel-btn prev" onclick="scrollCarousel(this, -1)">‹</button>
+                        <div class="carousel-track" id="track-3ThingsToDo"></div>
+                        <button class="carousel-btn next" onclick="scrollCarousel(this, 1)">›</button>
+                    </div>
+                    <div class="carousel-dots" id="dots-3ThingsToDo"></div>
+                </section>
 
-            <section class="guide-section" id="section-4FoodAndShops">
-                <h2>Food & Shops</h2>
-                <div class="carousel" data-section="4FoodAndShops">
-                    <button class="carousel-btn prev" onclick="scrollCarousel(this, -1)">‹</button>
-                    <div class="carousel-track" id="track-4FoodAndShops"></div>
-                    <button class="carousel-btn next" onclick="scrollCarousel(this, 1)">›</button>
-                </div>
-                <div class="carousel-dots" id="dots-4FoodAndShops"></div>
-            </section>
+                <section class="guide-section" id="section-4FoodAndShops">
+                    <h2>Food & Shops</h2>
+                    <div class="carousel" data-section="4FoodAndShops">
+                        <button class="carousel-btn prev" onclick="scrollCarousel(this, -1)">‹</button>
+                        <div class="carousel-track" id="track-4FoodAndShops"></div>
+                        <button class="carousel-btn next" onclick="scrollCarousel(this, 1)">›</button>
+                    </div>
+                    <div class="carousel-dots" id="dots-4FoodAndShops"></div>
+                </section>
 
-            <section class="guide-section" id="section-5Help">
-                <h2>Help</h2>
-                <div class="carousel" data-section="5Help">
-                    <button class="carousel-btn prev" onclick="scrollCarousel(this, -1)">‹</button>
-                    <div class="carousel-track" id="track-5Help"></div>
-                    <button class="carousel-btn next" onclick="scrollCarousel(this, 1)">›</button>
-                </div>
-                <div class="carousel-dots" id="dots-5Help"></div>
-            </section>
+                <section class="guide-section" id="section-5Help">
+                    <h2>Help</h2>
+                    <div class="carousel" data-section="5Help">
+                        <button class="carousel-btn prev" onclick="scrollCarousel(this, -1)">‹</button>
+                        <div class="carousel-track" id="track-5Help"></div>
+                        <button class="carousel-btn next" onclick="scrollCarousel(this, 1)">›</button>
+                    </div>
+                    <div class="carousel-dots" id="dots-5Help"></div>
+                </section>
 
-            <section class="guide-section" id="section-6Check-Out">
-                <h2>Check Out</h2>
-                <div class="carousel" data-section="6Check-Out">
-                    <button class="carousel-btn prev" onclick="scrollCarousel(this, -1)">‹</button>
-                    <div class="carousel-track" id="track-6Check-Out"></div>
-                    <button class="carousel-btn next" onclick="scrollCarousel(this, 1)">›</button>
-                </div>
-                <div class="carousel-dots" id="dots-6Check-Out"></div>
-            </section>
+                <section class="guide-section" id="section-6Check-Out">
+                    <h2>Check Out</h2>
+                    <div class="carousel" data-section="6Check-Out">
+                        <button class="carousel-btn prev" onclick="scrollCarousel(this, -1)">‹</button>
+                        <div class="carousel-track" id="track-6Check-Out"></div>
+                        <button class="carousel-btn next" onclick="scrollCarousel(this, 1)">›</button>
+                    </div>
+                    <div class="carousel-dots" id="dots-6Check-Out"></div>
+                </section>
+            </div>
+            
+            <button class="scroll-top-btn" id="scrollTopBtn" onclick="scrollToTop()">▲ Top</button>
         </main>
     </div>
 
@@ -117,10 +118,10 @@
 
         function showSection(id, btn) {
             document.querySelectorAll('.guide-section').forEach(s => s.classList.remove('active'));
-            document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.nav-btn-side').forEach(b => b.classList.remove('active'));
             document.getElementById('section-' + id).classList.add('active');
             if (btn) btn.classList.add('active');
-            document.getElementById('section-' + id).scrollIntoView({ behavior: 'smooth', block: 'start' });
+            document.getElementById('guideContent').scrollTop = 0;
         }
 
         function scrollCarousel(btn, direction) {
@@ -153,33 +154,23 @@
         }
 
         function scrollToTop() {
-            document.getElementById('guideContent').scrollTo({ top: 0, behavior: 'smooth' });
+            document.getElementById('guideContent').scrollTop = 0;
         }
 
-        function initScrollTopButton() {
+        function initGuideScrollTop() {
             const btn = document.getElementById('scrollTopBtn');
             const container = document.getElementById('guideContent');
             container.addEventListener('scroll', () => {
-                btn.style.display = container.scrollTop > 200 ? 'flex' : 'none';
+                btn.style.display = container.scrollTop > 200 ? 'block' : 'none';
             });
         }
 
         document.addEventListener('DOMContentLoaded', () => {
             initAllCarousels();
-            const firstBtn = document.querySelector('.nav-btn');
+            initGuideScrollTop();
+            const firstBtn = document.querySelector('.nav-btn-side');
             if (firstBtn) firstBtn.classList.add('active');
-            initScrollTopButton();
         });
-
-        function initScrollTopButton() {
-            const btn = document.getElementById('scrollTopBtn');
-            const container = document.getElementById('guideContent');
-            container.addEventListener('scroll', () => {
-                btn.style.display = container.scrollTop > 200 ? 'flex' : 'none';
-            });
-        }
     </script>
-
-    <button class="scroll-top-btn" id="scrollTopBtn" onclick="scrollToTop()">▲ Top</button>
 </body>
 </html>
